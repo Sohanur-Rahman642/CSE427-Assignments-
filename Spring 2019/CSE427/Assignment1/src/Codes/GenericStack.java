@@ -59,7 +59,16 @@ public class GenericStack<Object> {
 		
 	}
 	
-	
+	/*......Added isEmpty() after a Tdd test.....*/
+	public boolean isEmpty() {
+		
+	    if(top==0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 	
 	
 	
