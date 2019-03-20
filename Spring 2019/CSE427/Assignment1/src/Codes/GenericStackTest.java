@@ -268,6 +268,18 @@ public class GenericStackTest {
     	gs.push(244.23);
         assertEquals(244.23, gs.peek());
     }
+    
+    @Test
+    /*
+	 * Test push for Negative Doubles
+	 * values from the partition -42.4,-73.12,-122.57
+	 */
+    public void testPustForNegativeDoubles() {
+    	gs.push(-42.4);
+    	gs.push(-73.12);
+    	gs.push(-122.57);
+        assertEquals(-122.57, gs.peek());
+    } 
 
 
     
@@ -276,11 +288,24 @@ public class GenericStackTest {
 	 * Test push for Character values
 	 * values from the partition a,x,z
 	 */
-    public void testPustForNegativeDoubles() {
+    public void testPustForCharacterValues() {
     	gs.push('a');
     	gs.push('x');
     	gs.push('z');
         assertEquals('z', gs.peek());
+    }
+    
+    
+    @Test
+    /*
+	 * Test push for String values
+	 * values from the partition Lamborghini,Ferrari,Aston Martin
+	 */
+    public void testPustForStringValues() {
+    	gs.push("Lamborghini");
+    	gs.push("Ferrari");
+    	gs.push("Aston Martin");
+        assertEquals("Aston Martin", gs.peek());
     }
     
     
