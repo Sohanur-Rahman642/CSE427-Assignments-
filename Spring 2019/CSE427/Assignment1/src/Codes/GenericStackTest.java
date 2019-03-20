@@ -8,6 +8,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Test;
 
 public class GenericStackTest {
+	
+	GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
 
 	@Test
 	/*
@@ -17,7 +19,7 @@ public class GenericStackTest {
 	 */
 	public void sizeOfStackShouldBeZero() {
 		
-		GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
+		
 		assertThat("New Stack Should be Empty", gs.sizeAfterPush(),is (0));
 		
 	}
@@ -57,7 +59,7 @@ public class GenericStackTest {
 	 */
 	public void sizeOfStackAfterAPush() {
 		
-		GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
+		
 		gs.push(11);
 		assertThat("New Stack Should be One", gs.sizeAfterPush(),is (1));
 		
@@ -72,7 +74,7 @@ public class GenericStackTest {
 	
 	public void sizeOfStackAfterThreePush() {
 		
-		GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
+		
 		gs.push("Lionel");
 		gs.push("Messi");
 		gs.push(10);
@@ -89,10 +91,23 @@ public class GenericStackTest {
 	 */
 	
 	public void pushOneAndPeek() {
-		GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
+		
 		gs.push(1100);
 		assertThat("1 was pushed on the stack and 1 should be returned when calling peek.", gs.peek(), is(1100));
 	}
+	
+	
+    @Test
+    /*
+	 * Test of isEmpty method of class Stack.
+	 * Generate a compilation error 
+	 * Add isEmpty() into the GenericStack Class to fix
+	 */
+    public void testStackIsEmptyTrue() 
+    {
+        System.out.println("isEmpty");
+        assertTrue( gs.isEmpty());
+    }
 	
 
 }
