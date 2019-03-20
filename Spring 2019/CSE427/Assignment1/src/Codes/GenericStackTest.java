@@ -99,7 +99,7 @@ public class GenericStackTest {
 	
     @Test
     /*
-	 * Test of isEmpty method of class Stack.
+	 * Test of isEmpty method of class GenericStack.
 	 * Generate a compilation error 
 	 * Add isEmpty() into the GenericStack Class to fix
 	 */
@@ -109,5 +109,16 @@ public class GenericStackTest {
         assertTrue( gs.isEmpty());
     }
 	
+    @Test
+    /*
+	 * Test of isEmpty is false or not after a push class GenericStack.
+	 */
+    public void testStackIsEmptyFalse() 
+    {
+      
+    	 System.out.println("isEmpty");
+         gs.push( 1 );
+         assertFalse( gs.isEmpty() );
+    }
 
 }
