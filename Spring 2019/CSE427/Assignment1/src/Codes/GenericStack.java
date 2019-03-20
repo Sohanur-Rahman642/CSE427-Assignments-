@@ -54,10 +54,16 @@ public class GenericStack<Object> {
 	/*......Added peek() after a Tdd test.....*/
 	public Object peek() {
 		
-			return elements[top-1];
 		
+		if(!this.isEmpty()) {
+			return elements[top-1];
+		}
+		else {
+			return null;
+		}
 		
 	}
+	
 	
 	/*......Added isEmpty() after a Tdd test.....*/
 	public boolean isEmpty() {

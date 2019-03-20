@@ -105,7 +105,7 @@ public class GenericStackTest {
 	 */
     public void testStackIsEmptyTrue() 
     {
-        System.out.println("isEmpty");
+        
         assertTrue( gs.isEmpty());
     }
 	
@@ -116,9 +116,20 @@ public class GenericStackTest {
     public void testStackIsEmptyFalse() 
     {
       
-    	 System.out.println("isEmpty");
+    	 
          gs.push( 1 );
          assertFalse( gs.isEmpty() );
+    }
+    
+    @Test
+    /*
+	 * Test a successful push
+	 */
+    public void testPush() {
+    	gs.push( -17 );
+    	gs.push(12);
+    	gs.push(-16);
+        assertEquals(-16, gs.peek());
     }
 
 }
