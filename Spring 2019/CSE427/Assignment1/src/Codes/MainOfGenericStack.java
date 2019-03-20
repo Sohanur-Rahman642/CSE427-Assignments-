@@ -32,6 +32,7 @@ public class MainOfGenericStack {
 		System.out.println("Peek " +stack1.peek());
 		System.out.println("Pop "+stack1.pop());
 		System.out.println("Pop "+stack1.pop());
+		System.out.println("Pop "+stack1.pop());
 		
 		stack1.show();
 	}
