@@ -65,6 +65,9 @@ public class GenericStack<Object> {
 	}
 	
 	
+	
+	
+	
 	/*......Added isEmpty() after a Tdd test.....*/
 	public boolean isEmpty() {
 		
@@ -75,6 +78,19 @@ public class GenericStack<Object> {
 			return false;
 		}
 	}
+	
+	/*......Added Pop after a Tdd test.....*/
+	public Object pop() {
+		
+		Object x;
+		
+		top--;
+		x= elements[top];
+		elements[top]=null;
+		return x;
+
+
+}
 	
 	
 	

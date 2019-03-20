@@ -146,9 +146,9 @@ public class GenericStackTest {
     	gs.push("Busi");
     	gs.push("Iniesta");
     	
-        gs.pop();
+        Object actual = gs.pop();
         
-        assertEquals("Iniesta", gs.peek());
+        assertEquals("Iniesta", actual);
         
     }
 
