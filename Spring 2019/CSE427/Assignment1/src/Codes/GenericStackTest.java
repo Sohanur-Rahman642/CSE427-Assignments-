@@ -224,7 +224,7 @@ public class GenericStackTest {
     @Test
     /*
 	 * Test push for Negative Integers
-	 * values from the partition 67,991,1677
+	 * values from the partition -10,-577,-1754
 	 */
     public void testPustForNegativeIntegers() {
     	gs.push(-10);
@@ -232,4 +232,31 @@ public class GenericStackTest {
     	gs.push(-1754);
         assertEquals(-1754, gs.peek());
     }
+    
+    @Test
+    /*
+	 * Test push for Positive Floates
+	 * values from the partition 1.2,3.4,14.20
+	 */
+    public void testPustForPositiveFloates() {
+    	gs.push(1.2);
+    	gs.push(3.4);
+    	gs.push(14.20);
+        assertEquals(14.20, gs.peek());
+    }
+    
+    @Test
+    /*
+	 * Test push for Negative Floates
+	 * values from the partition -12.4,-43.2,-17.5
+	 */
+    public void testPustForNegativeFloates() {
+    	gs.push(-12.4);
+    	gs.push(-43.2);
+    	gs.push(-17.5);
+        assertEquals(-17.5, gs.peek());
+    }
+    
+    
+    
 }
