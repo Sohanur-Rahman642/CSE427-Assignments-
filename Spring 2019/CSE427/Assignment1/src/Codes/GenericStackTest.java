@@ -66,11 +66,11 @@ public class GenericStackTest {
 	@Test
 	/*
 	 * Test the size after three new push
-	 * expected value = 4
+	 * expected value = 3
 	 * 
 	 */
 	
-public void sizeOfStackAfterThreePush() {
+	public void sizeOfStackAfterThreePush() {
 		
 		GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
 		gs.push("Lionel");
@@ -78,6 +78,20 @@ public void sizeOfStackAfterThreePush() {
 		gs.push(10);
 		assertThat("New Stack Should be One", gs.sizeAfterPush(),is (3));
 		
+	}
+	
+
+	@Test
+	/*
+	 * Implement peek()
+	 * Generate a compilation error 
+	 * Add peek() into the GenericStack Class to fix
+	 */
+	
+	public void pushOneAndPeek() {
+		GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
+		gs.push(1100);
+		assertThat("1 was pushed on the stack and 1 should be returned when calling peek.", gs.peek(), is(1));
 	}
 	
 
