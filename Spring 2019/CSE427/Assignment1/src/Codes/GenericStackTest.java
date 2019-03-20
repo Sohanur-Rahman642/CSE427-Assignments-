@@ -17,16 +17,16 @@ public class GenericStackTest {
 	 */
 	public void sizeOfStackShouldBeZero() {
 		
-		GenericStack<Object>  gs = new GenericStack<>(Object.class);
-		assertThat("New Stack Should be Empty", gs.getSize(),is (0));
+		GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
+		assertThat("New Stack Should be Empty", gs.sizeAfterPush(),is (0));
 		
 	}
 	
-	@Test
-	/*
+/*	@Test
+	
 	 * Test the codes of push 
 	 * Implement the same code in the GenericStack class
-	 */
+	 
 	public void testANormalPush() {
 		Object actual = push(10);
 		assertEquals(10,actual);
@@ -35,16 +35,19 @@ public class GenericStackTest {
 	}
 	
 	public Object push(Object x) {
-		int top=0;
-		Object[] elements = null;
-		
-		    GenericStack<Object> gs = new GenericStack<>(Object.class);
-		    if(top<gs.getSize()) {
+			int top=0;
+			Object[] elements=null;
+			int size=5;
+		    GenericStack<Object> gs = new GenericStack<>(Object.class,5);
+		    if(top<size) {
 			elements[top] = x;
 			top++;	
 		}
 		    return x;
 	}
+	*/
+	
+	
 	
 	@Test
 	/*
@@ -54,13 +57,28 @@ public class GenericStackTest {
 	 */
 	public void sizeOfStackAfterAPush() {
 		
-		GenericStack<Object>  gs = new GenericStack<>(Object.class);
+		GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
 		gs.push(11);
-		assertThat("New Stack Should be One", gs.getSize(),is (0));
+		assertThat("New Stack Should be One", gs.sizeAfterPush(),is (1));
 		
 	}
 	
+	@Test
+	/*
+	 * Test the size after three new push
+	 * expected value = 4
+	 * 
+	 */
 	
+public void sizeOfStackAfterThreePush() {
+		
+		GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
+		gs.push("Lionel");
+		gs.push("Messi");
+		gs.push(10);
+		assertThat("New Stack Should be One", gs.sizeAfterPush(),is (3));
+		
+	}
 	
 
 }
