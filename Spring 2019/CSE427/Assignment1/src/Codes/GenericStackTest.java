@@ -44,5 +44,21 @@ public class GenericStackTest {
 		}
 		    return x;
 	}
+	
+	
+	@Test
+	/*
+	 * @Test will get a compilation error due to missing of getSize method in the GenericStack Class
+	 * That's what we wanted before using Refactoring 
+	 * After adding getSize() it will pass the test
+	 */
+	public void sizeOfStackAfterAPush() {
+		GenericStack<Object> gs = new GenericStack<>();
+		gs.push(11);
+		gs.push(12);
+		assertThat("New Stack Should not Empty", gs.getSize(),is (1));
+		
+	}
+	
 
 }

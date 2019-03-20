@@ -7,7 +7,7 @@ public class GenericStack<Object> {
 	private int top;
 	
 	public int getSize() {
-		return 0 ;
+		return this.size = size;
 	}
 	
 	public void push (Object x) {
