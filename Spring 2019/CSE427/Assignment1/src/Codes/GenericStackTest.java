@@ -208,7 +208,17 @@ public class GenericStackTest {
         Object peek = gs.pop();
     }
     
-    
-
+    /*....Input space partition testing....*/
+    @Test
+    /*
+	 * Test push for Postivie Integers
+	 * values from the partition 67,991,1677
+	 */
+    public void testPustForPositiveIntegers() {
+    	gs.push(67);
+    	gs.push(991);
+    	gs.push(1677);
+        assertEquals(1677, gs.peek());
+    }
     
 }
