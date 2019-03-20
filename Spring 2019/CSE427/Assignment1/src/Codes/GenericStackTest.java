@@ -169,7 +169,11 @@ public class GenericStackTest {
   
     public void isFull() 
     {
-    
+    	gs.push("Lamborghini");
+    	gs.push("Aston Martin");
+    	gs.push("Roles Royace");
+    	gs.push(-11);
+    	gs.push(120);
         assertTrue( gs.isFull());
        
         

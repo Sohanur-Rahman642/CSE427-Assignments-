@@ -95,7 +95,14 @@ public class GenericStack<Object> {
 	}
 	
 	
-	
+	public boolean isFull() {
+		if(top==size) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 	
 	
 	
