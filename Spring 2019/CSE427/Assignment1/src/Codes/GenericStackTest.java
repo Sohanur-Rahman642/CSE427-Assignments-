@@ -123,13 +123,33 @@ public class GenericStackTest {
     
     @Test
     /*
-	 * Test a successful push
+	 * Test some successful push
 	 */
     public void testPush() {
     	gs.push( -17 );
     	gs.push(12);
     	gs.push(-16);
         assertEquals(-16, gs.peek());
+    }
+    
+    @Test
+    /*
+	 * Test for pop()
+	 * Again it will generate a compilation error
+	 * will have to refacotr it adding pop() in the Generic Stack
+	 * class after the test fail
+	 */
+  
+    public void testPop() 
+    {
+    	gs.push("Xavi");
+    	gs.push("Busi");
+    	gs.push("Iniesta");
+    	
+        gs.pop();
+        
+        assertEquals("Iniesta", gs.peek());
+        
     }
 
 }
