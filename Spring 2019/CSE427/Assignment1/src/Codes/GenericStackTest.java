@@ -6,14 +6,31 @@ import java.io.EOFException;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import java.util.EmptyStackException;
+import org.junit.rules.ExpectedException;
 
 import org.junit.Test;
 
 
 
 public class GenericStackTest {
+	
+	@BeforeClass
+    public static void setUpClass() {
+		
+		GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
+		
+	}
+    
+    @AfterClass
+    public static void tearDownClass() {}
+    
+    @Rule
+    public ExpectedException exception = ExpectedException.none();
 	
 	GenericStack<Object>  gs = new GenericStack<>(Object.class,5);
 
@@ -178,5 +195,18 @@ public class GenericStackTest {
        
         
     }
+    
+
+    @Test
+    /*
+	 * Test check IndexOutOfBoundsException for pop() method
+	 */
+    public void testPopException() 
+    {
+       
+        exception.expect( IndexOutOfBoundsException.class );
+        Object peek = gs.pop();
+    }
+
     
 }
