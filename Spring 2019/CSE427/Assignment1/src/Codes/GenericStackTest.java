@@ -257,6 +257,29 @@ public class GenericStackTest {
         assertEquals(-17.5, gs.peek());
     }
     
+    @Test
+    /*
+	 * Test push for Positive Doubles
+	 * values from the partition 19.25,3.4,244.23
+	 */
+    public void testPustForPositiveDoubles() {
+    	gs.push(19.25);
+    	gs.push(3.4);
+    	gs.push(244.23);
+        assertEquals(244.23, gs.peek());
+    }
+    
+    @Test
+    /*
+	 * Test push for Negative Doubles
+	 * values from the partition -42.4,-73.12,-122.57
+	 */
+    public void testPustForNegativeDoubles() {
+    	gs.push(-42.4);
+    	gs.push(-73.12);
+    	gs.push(-122.57);
+        assertEquals(-122.57, gs.peek());
+    }
     
     
 }
