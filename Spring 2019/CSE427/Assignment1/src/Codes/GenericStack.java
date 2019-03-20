@@ -34,6 +34,7 @@ public class GenericStack<Object> {
 	}
 	
 	
+	
 	public int sizeAfterPush() {
 		Object x = null;
 		int count=0;
@@ -46,6 +47,13 @@ public class GenericStack<Object> {
 		return count;
 	
 
+	}
+	
+	public Object peek() {
+		
+			return elements[top-1];
+		
+		
 	}
 	
 	
