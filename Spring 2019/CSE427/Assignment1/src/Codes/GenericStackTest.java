@@ -214,7 +214,7 @@ public class GenericStackTest {
 	 * Test push for Postivie Integers
 	 * values from the partition 67,991,1677
 	 */
-    public void testPustForPositiveIntegers() {
+    public void testPushForPositiveIntegers() {
     	gs.push(67);
     	gs.push(991);
     	gs.push(1677);
@@ -226,7 +226,7 @@ public class GenericStackTest {
 	 * Test push for Negative Integers
 	 * values from the partition -10,-577,-1754
 	 */
-    public void testPustForNegativeIntegers() {
+    public void testPushForNegativeIntegers() {
     	gs.push(-10);
     	gs.push(-577);
     	gs.push(-1754);
@@ -238,7 +238,7 @@ public class GenericStackTest {
 	 * Test push for Positive Floates
 	 * values from the partition 1.2,3.4,14.20
 	 */
-    public void testPustForPositiveFloates() {
+    public void testPushForPositiveFloates() {
     	gs.push(1.2);
     	gs.push(3.4);
     	gs.push(14.20);
@@ -250,7 +250,7 @@ public class GenericStackTest {
 	 * Test push for Negative Floates
 	 * values from the partition -12.4,-43.2,-17.5
 	 */
-    public void testPustForNegativeFloates() {
+    public void testPushForNegativeFloates() {
     	gs.push(-12.4);
     	gs.push(-43.2);
     	gs.push(-17.5);
@@ -262,7 +262,7 @@ public class GenericStackTest {
 	 * Test push for Positive Doubles
 	 * values from the partition 19.25,3.4,244.23
 	 */
-    public void testPustForPositiveDoubles() {
+    public void testPushForPositiveDoubles() {
     	gs.push(19.25);
     	gs.push(3.4);
     	gs.push(244.23);
@@ -274,7 +274,7 @@ public class GenericStackTest {
 	 * Test push for Negative Doubles
 	 * values from the partition -42.4,-73.12,-122.57
 	 */
-    public void testPustForNegativeDoubles() {
+    public void testPushForNegativeDoubles() {
     	gs.push(-42.4);
     	gs.push(-73.12);
     	gs.push(-122.57);
@@ -288,7 +288,7 @@ public class GenericStackTest {
 	 * Test push for Character values
 	 * values from the partition a,x,z
 	 */
-    public void testPustForCharacterValues() {
+    public void testPushForCharacterValues() {
     	gs.push('a');
     	gs.push('x');
     	gs.push('z');
@@ -301,12 +301,35 @@ public class GenericStackTest {
 	 * Test push for String values
 	 * values from the partition Lamborghini,Ferrari,Aston Martin
 	 */
-    public void testPustForStringValues() {
+    public void testPushForStringValues() {
     	gs.push("Lamborghini");
     	gs.push("Ferrari");
     	gs.push("Aston Martin");
         assertEquals("Aston Martin", gs.peek());
     }
+    
+    
+    @Test
+    /*
+	 * Test Pop for Multiple values
+	 * values from the partition Lamborghini,-122.54, 45,v,3.12
+	 */
+    public void testPopForStringValues() {
+    	
+    	gs.push("Lamborghini");
+    	gs.push(-122.54);
+    	gs.push(45);
+    	gs.push('v');
+    	gs.push(3.12);
+    	
+    	gs.pop();
+    	gs.pop();
+    	Object actual = gs.pop();
+        
+        assertEquals(45, actual);
+        
+    }
+    
     
     
 }
