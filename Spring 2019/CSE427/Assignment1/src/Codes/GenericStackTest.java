@@ -221,4 +221,15 @@ public class GenericStackTest {
         assertEquals(1677, gs.peek());
     }
     
+    @Test
+    /*
+	 * Test push for Negative Integers
+	 * values from the partition 67,991,1677
+	 */
+    public void testPustForNegativeIntegers() {
+    	gs.push(-10);
+    	gs.push(-577);
+    	gs.push(-1754);
+        assertEquals(-1754, gs.peek());
+    }
 }
