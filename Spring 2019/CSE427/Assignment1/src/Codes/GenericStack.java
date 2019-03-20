@@ -1,5 +1,9 @@
 package Codes;
 
-public class GenericStack {
+public class GenericStack<Object> {
+	
+	
+	
+	
 
 }
