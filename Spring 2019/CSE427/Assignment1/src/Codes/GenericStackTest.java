@@ -2,10 +2,16 @@ package Codes;
 
 import static org.junit.Assert.*;
 
+import java.io.EOFException;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import org.junit.Rule;
+import java.util.EmptyStackException;
 
 import org.junit.Test;
+
+
 
 public class GenericStackTest {
 	
@@ -151,5 +157,22 @@ public class GenericStackTest {
         assertEquals("Iniesta", actual);
         
     }
-
+    
+    
+    @Test
+    /*
+	 * Test for isFull()
+	 * Again it will generate a compilation error
+	 * will have to refacotr it adding isFull() in the Generic Stack
+	 * class after the test fail
+	 */
+  
+    public void isFull() 
+    {
+    
+        assertTrue( gs.isFull());
+       
+        
+    }
+    
 }

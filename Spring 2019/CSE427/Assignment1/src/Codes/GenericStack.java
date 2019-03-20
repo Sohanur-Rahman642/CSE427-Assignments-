@@ -82,15 +82,19 @@ public class GenericStack<Object> {
 	/*......Added Pop after a Tdd test.....*/
 	public Object pop() {
 		
-		Object x;
 		
+		Object x;
 		top--;
 		x= elements[top];
 		elements[top]=null;
 		return x;
+		
+		
 
 
-}
+	}
+	
+	
 	
 	
 	
