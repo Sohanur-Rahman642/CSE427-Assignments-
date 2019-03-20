@@ -16,7 +16,8 @@ public class GenericStackTest {
 	 * After adding getSize() it will pass the test
 	 */
 	public void sizeOfStackShouldBeZero() {
-		GenericStack<Object> gs = new GenericStack<>();
+		
+		GenericStack<Object>  gs = new GenericStack<>(Object.class);
 		assertThat("New Stack Should be Empty", gs.getSize(),is (0));
 		
 	}
@@ -35,9 +36,9 @@ public class GenericStackTest {
 	
 	public Object push(Object x) {
 		int top=0;
-			Object[] elements = null;
+		Object[] elements = null;
 		
-		    GenericStack<Object> gs = new GenericStack<>();
+		    GenericStack<Object> gs = new GenericStack<>(Object.class);
 		    if(top<gs.getSize()) {
 			elements[top] = x;
 			top++;	
@@ -45,20 +46,21 @@ public class GenericStackTest {
 		    return x;
 	}
 	
-	
 	@Test
 	/*
-	 * @Test will get a compilation error due to missing of getSize method in the GenericStack Class
-	 * That's what we wanted before using Refactoring 
-	 * After adding getSize() it will pass the test
+	 * Test the size after a new push
+	 * expected value = 1
+	 * 
 	 */
 	public void sizeOfStackAfterAPush() {
-		GenericStack<Object> gs = new GenericStack<>();
+		
+		GenericStack<Object>  gs = new GenericStack<>(Object.class);
 		gs.push(11);
-		gs.push(12);
-		assertThat("New Stack Should not Empty", gs.getSize(),is (1));
+		assertThat("New Stack Should be One", gs.getSize(),is (0));
 		
 	}
+	
+	
 	
 
 }
