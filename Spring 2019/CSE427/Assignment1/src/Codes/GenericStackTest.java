@@ -207,6 +207,8 @@ public class GenericStackTest {
         exception.expect( IndexOutOfBoundsException.class );
         Object peek = gs.pop();
     }
+    
+    
 
     
 }

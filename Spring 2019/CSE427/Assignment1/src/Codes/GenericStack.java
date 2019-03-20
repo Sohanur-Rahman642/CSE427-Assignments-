@@ -79,7 +79,7 @@ public class GenericStack<Object> {
 		}
 	}
 	
-	/*......Added Pop after a Tdd test.....*/
+	/*......Added Pop() after a Tdd test.....*/
 	public Object pop() {
 		
 		
@@ -94,13 +94,21 @@ public class GenericStack<Object> {
 
 	}
 	
-	
+	/*......Added isFull() after a Tdd test.....*/
 	public boolean isFull() {
 		if(top==size) {
 			return true;
 		}
 		else {
 			return false;
+		}
+	}
+	
+	/*......Added show() after a Tdd test.....*/
+		public void show() {
+		
+		for(int i=0;i<size;i++) {
+			System.out.println(elements[i] + " ");
 		}
 	}
 	
