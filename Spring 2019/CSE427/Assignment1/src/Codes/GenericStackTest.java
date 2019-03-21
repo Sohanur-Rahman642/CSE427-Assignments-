@@ -180,7 +180,7 @@ public class GenericStackTest {
     /*
 	 * Test for isFull()
 	 * Again it will generate a compilation error
-	 * will have to refacotr it adding isFull() in the Generic Stack
+	 * will have to Refactor it adding isFull() in the Generic Stack
 	 * class after the test fail
 	 */
   
@@ -211,7 +211,7 @@ public class GenericStackTest {
     /*....Input space partition testing....*/
     @Test
     /*
-	 * Test push for Postivie Integers
+	 * Test push for Positive Integers
 	 * values from the partition 67,991,1677
 	 */
     public void testPushForPositiveIntegers() {
@@ -235,7 +235,7 @@ public class GenericStackTest {
     
     @Test
     /*
-	 * Test push for Positive Floates
+	 * Test push for Positive Floats
 	 * values from the partition 1.2,3.4,14.20
 	 */
     public void testPushForPositiveFloates() {
@@ -247,7 +247,7 @@ public class GenericStackTest {
     
     @Test
     /*
-	 * Test push for Negative Floates
+	 * Test push for Negative Floats
 	 * values from the partition -12.4,-43.2,-17.5
 	 */
     public void testPushForNegativeFloates() {
